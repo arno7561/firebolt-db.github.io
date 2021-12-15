@@ -98,7 +98,7 @@ The order of the fields is important. Firebolt will create the primary index on 
 Firebolt supports accelerating your joins by creating join indexes. Queries with joins might be resource-consuming and if not done efficiently - joins can take a significant amount of time to complete which makes them unusable to the user. Using Firebolt’s join indexing saves time searching data in the disk and loading it into memory. It’s already there, indexed by the required join key, and waits to be queried.
 
 **Warning!**
-Join indexes are not updated automatically in an engine when new data is ingested into a dimension table or a partition is dropped. You must refresh all indexes on all engines with queries that use them or those queries will return pre-update results. For more information, see [REFRESH JOIN INDEX](../sql-reference/commands/ddl-commands.md#refresh-join-index "mention").
+Join indexes are not updated automatically in an engine when new data is ingested into a dimension table or a partition is dropped. You must refresh all join indexes on all engines with queries that use them or those queries will return pre-update results. For more information, see [REFRESH JOIN INDEX](../sql-reference/commands/ddl-commands.md#refresh-join-index "mention").
 
 ### When to use join index
 
